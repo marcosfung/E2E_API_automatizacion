@@ -1,0 +1,23 @@
+CONCLUSIONES
+
+Se automatizó el flujo CRUD de usuarios sobre la API PetStore utilizando Karate Framework.
+
+Durante la ejecución se validaron las siguientes operaciones:
+
+1. Creación de usuario.
+2. Consulta del usuario registrado.
+3. Actualización de información del usuario.
+4. Verificación de los datos actualizados.
+5. Eliminación del usuario.
+6. Validación de eliminación mediante respuesta HTTP 404.
+
+Hallazgos
+
+- Todas las operaciones ejecutadas respondieron correctamente.
+- Los códigos HTTP obtenidos fueron los esperados para cada caso.
+- La información actualizada se mantuvo disponible en consultas posteriores.
+- La eliminación del usuario fue validada correctamente.
+
+Conclusión
+
+La API evaluada respondió de forma satisfactoria durante la ejecución de las pruebas realizadas. El flujo CRUD solicitado pudo completarse sin incidencias, permitiendo validar el comportamiento esperado de los servicios expuestos.

@@ -1,0 +1,17 @@
+{
+  "name": "saucedemo-e2e",
+  "version": "1.0.0",
+  "description": "Prueba E2E automatizada del flujo de compra en SauceDemo usando Cypress",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:headed": "cypress run --headed",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "test": "npm run cy:run"
+  },
+  "devDependencies": {
+    "cypress": "^15.17.0"
+  },
+  "author": "Marcos Fung",
+  "license": "ISC"
+}

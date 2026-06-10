@@ -1,0 +1,79 @@
+Conclusiones – Automatización E2E SauceDemo
+
+Se automatizó el flujo de compra de SauceDemo utilizando Cypress y el patrón de diseño Page Object Model (POM).
+
+El flujo validado fue:
+
+Login exitoso.
+Agregar dos productos al carrito.
+Visualizar los productos agregados.
+Completar el proceso de checkout.
+Finalizar la compra.
+Validar el mensaje de confirmación.
+
+Observaciones encontradas durante las pruebas
+
+- Login
+
+Las credenciales de prueba se encuentran visibles en la página principal, lo cual es esperado porque se trata de un ambiente demo utilizado para automatización y aprendizaje.
+
+También se verificó el comportamiento cuando se ingresan credenciales incorrectas, mostrando el mensaje de error correspondiente.
+
+- Carrito de compras
+
+Se pudo agregar y eliminar productos sin inconvenientes.
+
+El contador del carrito se actualiza correctamente cuando se agregan productos.
+
+Los productos seleccionados permanecen visibles durante todo el proceso de compra hasta la confirmación final.
+
+- Checkout
+
+Los campos First Name, Last Name y Postal Code son obligatorios para continuar.
+
+Cuando alguno de estos campos se deja vacío, la aplicación muestra un mensaje de validación y no permite avanzar al siguiente paso.
+
+- Confirmación de compra
+
+Luego de finalizar el checkout se muestra correctamente el mensaje:
+
+"Thank you for your order!"
+
+Con esto se confirma que el flujo de compra terminó satisfactoriamente.
+
+Uso de Page Object Model (POM)
+
+Se utilizó Page Object Model para organizar mejor el proyecto y separar las acciones de cada página.
+
+Se crearon las siguientes páginas:
+
+LoginPage
+InventoryPage
+CartPage
+CheckoutPage
+
+Esto permite mantener los selectores centralizados y facilita futuras modificaciones.
+
+Uso de Fixtures
+
+Los datos de prueba fueron almacenados en archivos de fixtures para evitar valores hardcodeados dentro de los tests y facilitar su mantenimiento.
+
+Comandos reutilizables
+
+Se implementaron comandos personalizados para acciones repetitivas como el login y la interacción con productos del carrito, reduciendo duplicidad de código.
+
+Cobertura ejecutada
+
+Se automatizaron los siguientes escenarios:
+
+Login exitoso.
+Login fallido.
+Agregar productos al carrito.
+Validación del carrito de compras.
+Checkout con datos válidos.
+Validación de campos obligatorios.
+Confirmación de compra exitosa.
+
+Conclusión
+
+La automatización permitió validar correctamente el flujo principal de compra de SauceDemo. Los escenarios ejecutados obtuvieron el resultado esperado y no se identificaron defectos que impidan completar el proceso de compra dentro del ambiente evaluado.
